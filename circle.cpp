@@ -11,7 +11,7 @@ Circle::Circle()
 {
 }
 
-Circle::Circle(const Point& c, int r)
+Circle::Circle(const Point& c, double r)
 	:center(c), rad(r)
 {
 }
