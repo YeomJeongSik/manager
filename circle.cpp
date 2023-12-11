@@ -26,6 +26,7 @@ Circle::Circle(const Circle& other)
 
 Circle::~Circle()
 {
+	
 }
 
 void Circle::draw() const

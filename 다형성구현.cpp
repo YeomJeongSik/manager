@@ -8,7 +8,7 @@
 // 
 // 2023.11.19	Wulong
 //---------------------------------------------------------------------------------------------------------
-#include <iostream>
+//#include <iostream>
 #include "point.h"
 #include "triangle.h"
 #include "circle.h"
@@ -19,7 +19,7 @@
 int main()
 //----------
 {
-	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+//	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);	//누수용 코드
 	// 이 프로그램은 프로젝트를 확인하기 위한 것이다.
 	// 실습 순서대로 문제를 해결해보자
 
@@ -32,12 +32,11 @@ int main()
 
 	for (int i = 0; i < 10; ++i)
 		sm.insert(new Rectangle(Point(i, i + 1), Point(i * 2, i * 3)));
-
 	sm.insert(new Line(Point(1, 1), Point(2, 2)));
 
 	// 3. 관리하고 있는 모든 도형을 그림
 	sm.draw();
-	// 이 프로그램에서 잘못된 점을 찾을 수 있는가?
-	// 잘못된 점을 어떻게 찾을 수 있는가?
+	// 이 프로그램에서 잘못된 점을 찾을 수 있는가?	//메모리 누수가 일어나고 있다.
+	// 잘못된 점을 어떻게 찾을 수 있는가?	// Debug 상태로 _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF); 치고 f5를 누르면 가능
 
 } 

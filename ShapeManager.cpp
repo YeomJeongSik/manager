@@ -20,6 +20,8 @@ ShapeManager::ShapeManager(int n)
 ShapeManager::~ShapeManager()
 //-----------------------------------------------------
 {
+	for (int i = 0; i < nshape; ++i)
+		delete shapes[i];
 	// 모든 객체가 정확하게 삭제되는지 반드시 확인하여야 한다.
 	delete[] shapes;					// 도형관리자가 관리하는 도형의 소멸자를 호출함
 }
