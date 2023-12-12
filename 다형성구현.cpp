@@ -8,7 +8,7 @@
 // 
 // 2023.11.19	Wulong
 //---------------------------------------------------------------------------------------------------------
-//#include <iostream>
+#include <iostream>
 #include "point.h"
 #include "triangle.h"
 #include "circle.h"
@@ -19,10 +19,37 @@
 int main()
 //----------
 {
-//	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);	//누수용 코드
-	// 이 프로그램은 프로젝트를 확인하기 위한 것이다.
-	// 실습 순서대로 문제를 해결해보자
+	int cnt{};
+	int num{};
+	std::cout << '\t' << "Menu" << '\n';
+	std::cout << " - 원하는 도형 추가" << '\n';
+	std::cout << '\t' << " - 삼각형(1)" << '\n';
+	std::cout << '\t' << " - 사각형(2)" << '\n';
+	std::cout << '\t' << " - 원(3)" << '\n';
+	std::cout << '\t' << " - 선(4)" << '\n';
+	std::cout << " - 전체 도형을 그리기(5)" << '\n';
+	std::cout << " - 프로그램 끝내기(6)" << '\n';
 
+	std::cin >> num;
+
+	if (num == 1) {
+		
+	}
+	else if (num == 2) {
+
+	}
+	else if (num == 3) {
+
+	}
+	else if (num == 4) {
+
+	}
+	else if (num == 5) {
+
+	}
+	else if (num == 6) {
+
+	}
 	// 1. 관리 클래스를 만듦
 	ShapeManager sm(100);				// 최대 100개의 도형을 관리함
 	// 2. 도형들을 관리 클래스에 삽입함
@@ -38,5 +65,5 @@ int main()
 	sm.draw();
 	// 이 프로그램에서 잘못된 점을 찾을 수 있는가?	//메모리 누수가 일어나고 있다.
 	// 잘못된 점을 어떻게 찾을 수 있는가?	// Debug 상태로 _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF); 치고 f5를 누르면 가능
-
+	
 } 
